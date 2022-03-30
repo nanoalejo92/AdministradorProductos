@@ -11,11 +11,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class AdministradorProductosTest {
 
     @Test
-    public void main() {
+    public void testDescuentoComida() {
         double Descuento;
-        Descuento = 1000;
-        Comida p3 = new Comida(103, "Pastel",20000,LocalDate.now().plusDays(2));
+        Comida p3 = new Comida(103, "Pastel", 20000, LocalDate.now().plusDays(0));
+        Descuento = p3.getPrecio() * 0.1d;
         assertEquals(Descuento, p3.getDescuento());
-
     }
 }
+
